@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4749F62727A2E50B0065C596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F62627A2E50B0065C596 /* AppDelegate.swift */; };
+		4749F62927A2E50B0065C596 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F62827A2E50B0065C596 /* SceneDelegate.swift */; };
+		4749F62B27A2E50B0065C596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F62A27A2E50B0065C596 /* ViewController.swift */; };
+		4749F62E27A2E50B0065C596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4749F62C27A2E50B0065C596 /* Main.storyboard */; };
+		4749F63027A2E50E0065C596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4749F62F27A2E50E0065C596 /* Assets.xcassets */; };
+		4749F63327A2E50E0065C596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4749F63127A2E50E0065C596 /* LaunchScreen.storyboard */; };
+		4749F63E27A2E50E0065C596 /* calender_myloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F63D27A2E50E0065C596 /* calender_myloTests.swift */; };
+		4749F64927A2E50E0065C596 /* calender_myloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F64827A2E50E0065C596 /* calender_myloUITests.swift */; };
+		4749FD4E27A41F15002B3F36 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749FD4C27A41F15002B3F36 /* ItemCell.swift */; };
+		4749FD4F27A41F15002B3F36 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4749FD4D27A41F15002B3F36 /* ItemCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4749F63A27A2E50E0065C596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4749F61B27A2E50B0065C596 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4749F62227A2E50B0065C596;
+			remoteInfo = "calender-mylo";
+		};
+		4749F64527A2E50E0065C596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4749F61B27A2E50B0065C596 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4749F62227A2E50B0065C596;
+			remoteInfo = "calender-mylo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4749F62327A2E50B0065C596 /* calender-mylo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "calender-mylo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4749F62627A2E50B0065C596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4749F62827A2E50B0065C596 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4749F62A27A2E50B0065C596 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4749F62D27A2E50B0065C596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4749F62F27A2E50E0065C596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4749F63227A2E50E0065C596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4749F63427A2E50E0065C596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4749F63927A2E50E0065C596 /* calender-myloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "calender-myloTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4749F63D27A2E50E0065C596 /* calender_myloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calender_myloTests.swift; sourceTree = "<group>"; };
+		4749F63F27A2E50E0065C596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4749F64427A2E50E0065C596 /* calender-myloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "calender-myloUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4749F64827A2E50E0065C596 /* calender_myloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calender_myloUITests.swift; sourceTree = "<group>"; };
+		4749F64A27A2E50E0065C596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4749FD4C27A41F15002B3F36 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		4749FD4D27A41F15002B3F36 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4749F62027A2E50B0065C596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4749F63627A2E50E0065C596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4749F64127A2E50E0065C596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4749F61A27A2E50B0065C596 = {
+			isa = PBXGroup;
+			children = (
+				4749F62527A2E50B0065C596 /* calender-mylo */,
+				4749F63C27A2E50E0065C596 /* calender-myloTests */,
+				4749F64727A2E50E0065C596 /* calender-myloUITests */,
+				4749F62427A2E50B0065C596 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4749F62427A2E50B0065C596 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4749F62327A2E50B0065C596 /* calender-mylo.app */,
+				4749F63927A2E50E0065C596 /* calender-myloTests.xctest */,
+				4749F64427A2E50E0065C596 /* calender-myloUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4749F62527A2E50B0065C596 /* calender-mylo */ = {
+			isa = PBXGroup;
+			children = (
+				4749F62627A2E50B0065C596 /* AppDelegate.swift */,
+				4749F62827A2E50B0065C596 /* SceneDelegate.swift */,
+				4749F62A27A2E50B0065C596 /* ViewController.swift */,
+				4749F62C27A2E50B0065C596 /* Main.storyboard */,
+				4749F62F27A2E50E0065C596 /* Assets.xcassets */,
+				4749F63127A2E50E0065C596 /* LaunchScreen.storyboard */,
+				4749F63427A2E50E0065C596 /* Info.plist */,
+				4749FD4C27A41F15002B3F36 /* ItemCell.swift */,
+				4749FD4D27A41F15002B3F36 /* ItemCell.xib */,
+			);
+			path = "calender-mylo";
+			sourceTree = "<group>";
+		};
+		4749F63C27A2E50E0065C596 /* calender-myloTests */ = {
+			isa = PBXGroup;
+			children = (
+				4749F63D27A2E50E0065C596 /* calender_myloTests.swift */,
+				4749F63F27A2E50E0065C596 /* Info.plist */,
+			);
+			path = "calender-myloTests";
+			sourceTree = "<group>";
+		};
+		4749F64727A2E50E0065C596 /* calender-myloUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4749F64827A2E50E0065C596 /* calender_myloUITests.swift */,
+				4749F64A27A2E50E0065C596 /* Info.plist */,
+			);
+			path = "calender-myloUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4749F62227A2E50B0065C596 /* calender-mylo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4749F64D27A2E50E0065C596 /* Build configuration list for PBXNativeTarget "calender-mylo" */;
+			buildPhases = (
+				4749F61F27A2E50B0065C596 /* Sources */,
+				4749F62027A2E50B0065C596 /* Frameworks */,
+				4749F62127A2E50B0065C596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "calender-mylo";
+			productName = "calender-mylo";
+			productReference = 4749F62327A2E50B0065C596 /* calender-mylo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4749F63827A2E50E0065C596 /* calender-myloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4749F65027A2E50E0065C596 /* Build configuration list for PBXNativeTarget "calender-myloTests" */;
+			buildPhases = (
+				4749F63527A2E50E0065C596 /* Sources */,
+				4749F63627A2E50E0065C596 /* Frameworks */,
+				4749F63727A2E50E0065C596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4749F63B27A2E50E0065C596 /* PBXTargetDependency */,
+			);
+			name = "calender-myloTests";
+			productName = "calender-myloTests";
+			productReference = 4749F63927A2E50E0065C596 /* calender-myloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4749F64327A2E50E0065C596 /* calender-myloUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4749F65327A2E50E0065C596 /* Build configuration list for PBXNativeTarget "calender-myloUITests" */;
+			buildPhases = (
+				4749F64027A2E50E0065C596 /* Sources */,
+				4749F64127A2E50E0065C596 /* Frameworks */,
+				4749F64227A2E50E0065C596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4749F64627A2E50E0065C596 /* PBXTargetDependency */,
+			);
+			name = "calender-myloUITests";
+			productName = "calender-myloUITests";
+			productReference = 4749F64427A2E50E0065C596 /* calender-myloUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4749F61B27A2E50B0065C596 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4749F62227A2E50B0065C596 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					4749F63827A2E50E0065C596 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4749F62227A2E50B0065C596;
+					};
+					4749F64327A2E50E0065C596 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4749F62227A2E50B0065C596;
+					};
+				};
+			};
+			buildConfigurationList = 4749F61E27A2E50B0065C596 /* Build configuration list for PBXProject "calender-mylo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4749F61A27A2E50B0065C596;
+			productRefGroup = 4749F62427A2E50B0065C596 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4749F62227A2E50B0065C596 /* calender-mylo */,
+				4749F63827A2E50E0065C596 /* calender-myloTests */,
+				4749F64327A2E50E0065C596 /* calender-myloUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4749F62127A2E50B0065C596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4749FD4F27A41F15002B3F36 /* ItemCell.xib in Resources */,
+				4749F63327A2E50E0065C596 /* LaunchScreen.storyboard in Resources */,
+				4749F63027A2E50E0065C596 /* Assets.xcassets in Resources */,
+				4749F62E27A2E50B0065C596 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4749F63727A2E50E0065C596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4749F64227A2E50E0065C596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4749F61F27A2E50B0065C596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4749FD4E27A41F15002B3F36 /* ItemCell.swift in Sources */,
+				4749F62B27A2E50B0065C596 /* ViewController.swift in Sources */,
+				4749F62727A2E50B0065C596 /* AppDelegate.swift in Sources */,
+				4749F62927A2E50B0065C596 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4749F63527A2E50E0065C596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4749F63E27A2E50E0065C596 /* calender_myloTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4749F64027A2E50E0065C596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4749F64927A2E50E0065C596 /* calender_myloUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4749F63B27A2E50E0065C596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4749F62227A2E50B0065C596 /* calender-mylo */;
+			targetProxy = 4749F63A27A2E50E0065C596 /* PBXContainerItemProxy */;
+		};
+		4749F64627A2E50E0065C596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4749F62227A2E50B0065C596 /* calender-mylo */;
+			targetProxy = 4749F64527A2E50E0065C596 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4749F62C27A2E50B0065C596 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4749F62D27A2E50B0065C596 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4749F63127A2E50E0065C596 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4749F63227A2E50E0065C596 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4749F64B27A2E50E0065C596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4749F64C27A2E50E0065C596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4749F64E27A2E50E0065C596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "calender-mylo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "project.calender-mylo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4749F64F27A2E50E0065C596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "calender-mylo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "project.calender-mylo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4749F65127A2E50E0065C596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "calender-myloTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "project.calender-myloTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/calender-mylo.app/calender-mylo";
+			};
+			name = Debug;
+		};
+		4749F65227A2E50E0065C596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "calender-myloTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "project.calender-myloTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/calender-mylo.app/calender-mylo";
+			};
+			name = Release;
+		};
+		4749F65427A2E50E0065C596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "calender-myloUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "project.calender-myloUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "calender-mylo";
+			};
+			name = Debug;
+		};
+		4749F65527A2E50E0065C596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "calender-myloUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "project.calender-myloUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "calender-mylo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4749F61E27A2E50B0065C596 /* Build configuration list for PBXProject "calender-mylo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4749F64B27A2E50E0065C596 /* Debug */,
+				4749F64C27A2E50E0065C596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4749F64D27A2E50E0065C596 /* Build configuration list for PBXNativeTarget "calender-mylo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4749F64E27A2E50E0065C596 /* Debug */,
+				4749F64F27A2E50E0065C596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4749F65027A2E50E0065C596 /* Build configuration list for PBXNativeTarget "calender-myloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4749F65127A2E50E0065C596 /* Debug */,
+				4749F65227A2E50E0065C596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4749F65327A2E50E0065C596 /* Build configuration list for PBXNativeTarget "calender-myloUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4749F65427A2E50E0065C596 /* Debug */,
+				4749F65527A2E50E0065C596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4749F61B27A2E50B0065C596 /* Project object */;
+}
