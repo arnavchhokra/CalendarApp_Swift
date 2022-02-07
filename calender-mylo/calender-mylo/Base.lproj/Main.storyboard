@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Grid View-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calender_mylo" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,6 +112,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="U7a-Lo-MpL" firstAttribute="width" secondItem="k21-fs-tb2" secondAttribute="width" multiplier="1.04469" id="3BT-fU-XLu"/>
                             <constraint firstItem="xVz-tE-bKD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5dx-Cp-rpg"/>
@@ -127,8 +128,12 @@
                             <constraint firstItem="cSF-Md-UnT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="niX-kZ-Gco"/>
                             <constraint firstItem="U7a-Lo-MpL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o7d-w2-3IQ"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mxt-ws-HbF" appends="YES" id="eW1-d5-X8c"/>
+                            <outletCollection property="gestureRecognizers" destination="tlO-aY-AE9" appends="YES" id="U3k-Kw-Uot"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Grid View" id="FHh-GV-S8w"/>
+                    <navigationItem key="navigationItem" id="FHh-GV-S8w"/>
                     <connections>
                         <outlet property="MonthLbl" destination="xVz-tE-bKD" id="KgQ-IW-ECh"/>
                         <outlet property="collectionView" destination="U7a-Lo-MpL" id="f3m-xh-PMI"/>
@@ -136,6 +141,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="mxt-ws-HbF">
+                    <connections>
+                        <action selector="swipeleft:" destination="BYZ-38-t0r" id="BWe-mM-nVZ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="tlO-aY-AE9">
+                    <connections>
+                        <action selector="swiperight:" destination="BYZ-38-t0r" id="lv9-ix-86J"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
         </scene>
@@ -144,7 +159,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xm9-XO-s0W" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R9b-kd-pPM">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="R9b-kd-pPM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

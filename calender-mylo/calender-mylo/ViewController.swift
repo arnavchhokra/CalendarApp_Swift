@@ -11,12 +11,13 @@ import UIKit
 
 
 class ViewController: UIViewController, UICollectionViewDataSource {
-    var Month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-    var daysinMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
+    let Month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    var daysinMonth = [31,28,31,30,31,30,31,31,30,31,30,31] // cant make this constant due to line 39
     var currentYear: Int = 2021
     var currentMonth: Int = 0
     var firstWeekdayOfMonth = 0
-    var dateArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
+    let dateArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
+    
     var dateArray2 = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
     var q: Int = 0
     var blank_arr = [" "]
@@ -81,11 +82,8 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
      }
     
-    
-    
-    @IBOutlet weak var MonthLbl: UILabel!
-    
-    @IBAction func Left_button(_ sender: Any) {
+    func  Left_Button()
+    {
         new_arr = []
         dateArray2 = dateArray
         currentMonth -= 1
@@ -130,13 +128,11 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
         collectionView.reloadData()
 
-        
-
-        
-    
     }
     
-    @IBAction func Right_button(_ sender: Any) {
+    
+    func Right_Button()
+    {
         new_arr = []
     dateArray2 = dateArray
     currentMonth += 1
@@ -178,13 +174,28 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
         
         collectionView.reloadData()
-        
-
-
-        
-
-        
-
+        }
+    
+    
+    
+    @IBOutlet weak var MonthLbl: UILabel!
+    
+    @IBAction func Left_button(_ sender: Any) {
+        Left_Button()
+    }
+    
+    
+    @IBAction func swipeleft(_ sender: UISwipeGestureRecognizer) {
+        Right_Button()
+    }
+    
+    
+    @IBAction func swiperight(_ sender: UISwipeGestureRecognizer) {
+        Left_Button()
+    }
+    
+    @IBAction func Right_button(_ sender: Any) {
+        Right_Button()
     }
     
     
