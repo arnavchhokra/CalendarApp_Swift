@@ -55,9 +55,9 @@ class ViewController: UIViewController, UICollectionViewDataSource {
 
         
         
-        var date = Calendar.current.date(from: dateComponents)!
-        var calendar = Calendar.current
-        var components = calendar.dateComponents([.weekday], from: date)
+        let date = Calendar.current.date(from: dateComponents)!
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.weekday], from: date)
         var dayOfWeek = components.weekday! - 1
         
         while(dayOfWeek != 0)
@@ -112,9 +112,9 @@ class ViewController: UIViewController, UICollectionViewDataSource {
 
         
         
-        var date = Calendar.current.date(from: dateComponents)!
-        var calendar = Calendar.current
-        var components = calendar.dateComponents([.weekday], from: date)
+        let date = Calendar.current.date(from: dateComponents)!
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.weekday], from: date)
         var dayOfWeek = components.weekday! - 1
         
         
@@ -159,9 +159,9 @@ class ViewController: UIViewController, UICollectionViewDataSource {
 
         
         
-        var date = Calendar.current.date(from: dateComponents)!
-        var calendar = Calendar.current
-        var components = calendar.dateComponents([.weekday], from: date)
+        let date = Calendar.current.date(from: dateComponents)!
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.weekday], from: date)
         var dayOfWeek = components.weekday! - 1
         
         
