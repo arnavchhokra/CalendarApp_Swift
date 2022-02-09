@@ -10,18 +10,20 @@ import UIKit
 
 
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource{
     let Month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-    var daysinMonth = [31,28,31,30,31,30,31,31,30,31,30,31] // cant make this constant due to line 39
-    var currentYear: Int = 2021
-    var currentMonth: Int = 0
-    var firstWeekdayOfMonth = 0
-    let dateArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
+    var DaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31] // cant make this constant due to line 39
+    var CurrentYear: Int = 2021
+    var CurrentMonth: Int = 0
+    var FirstWeekDayOfMonth = 0
+    let DateArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
     
-    var dateArray2 = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
-    var q: Int = 0
-    var blank_arr = [" "]
-    var new_arr = [String]()
+    var DateArray2 = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
+    var LastWeekDay: Int = 0
+    var BlankArray = [" "]
+    var ResultArray = [String]()
+  //  var collectionView: UICollectionViewDelegate!
+    
     
         
    
@@ -32,25 +34,25 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
 
         
-        currentMonth = Calendar.current.component(.month, from: Date())
-        currentMonth -= 1
-        currentYear = Calendar.current.component(.year, from: Date())
-        MonthLbl.text = "\(Month[currentMonth]) \(currentYear)"
-        if( currentMonth == 1 && currentYear % 4 == 0)
+        CurrentMonth = Calendar.current.component(.month, from: Date())
+        CurrentMonth -= 1
+        CurrentYear = Calendar.current.component(.year, from: Date())
+        MonthLbl.text = "\(Month[CurrentMonth]) \(CurrentYear)"
+        if( CurrentMonth == 1 && CurrentYear % 4 == 0)
         {
-            daysinMonth[currentMonth] = 29
+            DaysInMonth[CurrentMonth] = 29
         }
-        q = 31 - daysinMonth[currentMonth]
-        while(q != 0)
+        LastWeekDay = 31 - DaysInMonth[CurrentMonth]
+        while(LastWeekDay != 0)
         {
-            dateArray2.removeLast()
-            q=q-1
+            DateArray2.removeLast()
+            LastWeekDay=LastWeekDay-1
         }
         
         
         var dateComponents = DateComponents()
-        dateComponents.year = currentYear
-        dateComponents.month = currentMonth + 1
+        dateComponents.year = CurrentYear
+        dateComponents.month = CurrentMonth + 1
         dateComponents.day = 1
 
         
@@ -62,11 +64,11 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
         while(dayOfWeek != 0)
         {
-            new_arr.append(contentsOf: blank_arr)
+            ResultArray.append(contentsOf: BlankArray)
             dayOfWeek -= 1
             
         }
-        new_arr.append(contentsOf: dateArray2)
+        ResultArray.append(contentsOf: DateArray2)
         
 
     
@@ -75,7 +77,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
 
             
         
-        //   self.collectionView.delegate = self
+//        self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
         self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil ) , forCellWithReuseIdentifier: "ItemCell")
@@ -84,30 +86,30 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     func  Left_Button()
     {
-        new_arr = []
-        dateArray2 = dateArray
-        currentMonth -= 1
-        if(currentMonth < 0)
+        ResultArray = []
+        DateArray2 = DateArray
+        CurrentMonth -= 1
+        if(CurrentMonth < 0)
         {
-            currentYear -= 1
-            currentMonth = 11
+            CurrentYear -= 1
+            CurrentMonth = 11
         }
 
 
-        MonthLbl.text = "\(Month[currentMonth]) \(currentYear)"
-        if( currentMonth == 1 && currentYear % 4 == 0)
+        MonthLbl.text = "\(Month[CurrentMonth]) \(CurrentYear)"
+        if( CurrentMonth == 1 && CurrentYear % 4 == 0)
         {
-            daysinMonth[currentMonth] = 29
+            DaysInMonth[CurrentMonth] = 29
         }
-        q = 31 - daysinMonth[currentMonth]
-        while(q != 0)
+        LastWeekDay = 31 - DaysInMonth[CurrentMonth]
+        while(LastWeekDay != 0)
         {
-            dateArray2.removeLast()
-            q = q - 1
+            DateArray2.removeLast()
+            LastWeekDay = LastWeekDay - 1
         }
         var dateComponents = DateComponents()
-        dateComponents.year = currentYear
-        dateComponents.month = currentMonth + 1
+        dateComponents.year = CurrentYear
+        dateComponents.month = CurrentMonth + 1
         dateComponents.day = 1
 
         
@@ -120,11 +122,11 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
         while(dayOfWeek != 0)
         {
-            new_arr.append(contentsOf: blank_arr)
+            ResultArray.append(contentsOf: BlankArray)
             dayOfWeek -= 1
             
         }
-        new_arr.append(contentsOf: dateArray2)
+        ResultArray.append(contentsOf: DateArray2)
         
         collectionView.reloadData()
 
@@ -133,28 +135,28 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     func Right_Button()
     {
-        new_arr = []
-    dateArray2 = dateArray
-    currentMonth += 1
-    if(currentMonth > 11)
+        ResultArray = []
+    DateArray2 = DateArray
+    CurrentMonth += 1
+    if(CurrentMonth > 11)
     {
-        currentYear+=1
-        currentMonth=0
+        CurrentYear+=1
+        CurrentMonth=0
     }
-        MonthLbl.text = "\(Month[currentMonth]) \(currentYear)"
-        if( currentMonth == 1 && currentYear % 4 == 0)
+        MonthLbl.text = "\(Month[CurrentMonth]) \(CurrentYear)"
+        if( CurrentMonth == 1 && CurrentYear % 4 == 0)
         {
-            daysinMonth[currentMonth] = 29
+            DaysInMonth[CurrentMonth] = 29
         }
-        q = 31 - daysinMonth[currentMonth]
-        while(q != 0)
+        LastWeekDay = 31 - DaysInMonth[CurrentMonth]
+        while(LastWeekDay != 0)
         {
-            dateArray2.removeLast()
-            q = q-1
+            DateArray2.removeLast()
+            LastWeekDay = LastWeekDay-1
         }
         var dateComponents = DateComponents()
-        dateComponents.year = currentYear
-        dateComponents.month = currentMonth + 1
+        dateComponents.year = CurrentYear
+        dateComponents.month = CurrentMonth + 1
         dateComponents.day = 1
 
         
@@ -167,10 +169,10 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
         while(dayOfWeek != 0)
         {
-            new_arr.append(contentsOf: blank_arr)
+            ResultArray.append(contentsOf: BlankArray)
             dayOfWeek -= 1
         }
-        new_arr.append(contentsOf: dateArray2)
+        ResultArray.append(contentsOf: DateArray2)
         
         
         collectionView.reloadData()
@@ -201,14 +203,25 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      
-     return self.new_arr.count
+     return self.ResultArray.count
      }
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-         cell.setData(text: self.new_arr[indexPath.row])
+         cell.setData(text: self.ResultArray[indexPath.row])
+        cell.layer.cornerRadius = cell.frame.height/2;
          return cell
          
     }
+    
+    func collectionView(_ collectionView: UICollectionView,didSelectItemAt indexPath: IndexPath)
+    {
+        if let selectedCell = collectionView.cellForItem(at: indexPath)
+        {
+            selectedCell.contentView.backgroundColor = UIColor(red:1, green: 0, blue: 0, alpha: 0.66 )
+        }
+
+    }
+ 
     
     
     

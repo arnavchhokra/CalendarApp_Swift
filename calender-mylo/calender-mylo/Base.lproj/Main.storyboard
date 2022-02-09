@@ -35,20 +35,21 @@
                                 <rect key="frame" x="20" y="227.5" width="374" height="669.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bb9-gn-5t6">
-                                    <size key="itemSize" width="40" height="51"/>
+                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="estimatedItemSize" width="40" height="40"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jim-g3-hgu">
-                                        <rect key="frame" x="0.0" y="0.0" width="32" height="51"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0ms-1q-xiz">
-                                            <rect key="frame" x="0.0" y="0.0" width="32" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="32" height="51"/>
+                                        <size key="customSize" width="32" height="32"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
