@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ViewController: UIViewController, UICollectionViewDataSource{
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     let Month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     var DaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31] // cant make this constant due to line 39
     var CurrentYear: Int = 2021
@@ -23,6 +23,7 @@ class ViewController: UIViewController, UICollectionViewDataSource{
     var BlankArray = [" "]
     var ResultArray = [String]()
   //  var collectionView: UICollectionViewDelegate!
+    
     
     
         
@@ -77,14 +78,14 @@ class ViewController: UIViewController, UICollectionViewDataSource{
 
             
         
-//        self.collectionView.delegate = self
+        self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
         self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil ) , forCellWithReuseIdentifier: "ItemCell")
         
      }
     
-    func  Left_Button()
+    func  LeftButton()
     {
         ResultArray = []
         DateArray2 = DateArray
@@ -133,7 +134,7 @@ class ViewController: UIViewController, UICollectionViewDataSource{
     }
     
     
-    func Right_Button()
+    func RightButton()
     {
         ResultArray = []
     DateArray2 = DateArray
@@ -183,21 +184,21 @@ class ViewController: UIViewController, UICollectionViewDataSource{
     @IBOutlet weak var MonthLbl: UILabel!
     
     @IBAction func Left_button(_ sender: Any) {
-        Left_Button()
+        LeftButton()
     }
     
     
     @IBAction func swipeleft(_ sender: UISwipeGestureRecognizer) {
-        Right_Button()
+        RightButton()
     }
     
     
     @IBAction func swiperight(_ sender: UISwipeGestureRecognizer) {
-        Left_Button()
+        LeftButton()
     }
     
     @IBAction func Right_button(_ sender: Any) {
-        Right_Button()
+        RightButton()
     }
     
     
@@ -206,20 +207,26 @@ class ViewController: UIViewController, UICollectionViewDataSource{
      return self.ResultArray.count
      }
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-         cell.setData(text: self.ResultArray[indexPath.row])
-        cell.layer.cornerRadius = cell.frame.height/2;
-         return cell
+         let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
+         Cell.setData(text: self.ResultArray[indexPath.row])
+        Cell.layer.cornerRadius = Cell.frame.height/2;
+         return Cell
          
     }
     
-    func collectionView(_ collectionView: UICollectionView,didSelectItemAt indexPath: IndexPath)
-    {
-        if let selectedCell = collectionView.cellForItem(at: indexPath)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let SelectedCell = collectionView.cellForItem(at: indexPath)
         {
-            selectedCell.contentView.backgroundColor = UIColor(red:1, green: 0, blue: 0, alpha: 0.66 )
-        }
 
+            SelectedCell.contentView.backgroundColor = UIColor(red:1, green: 0, blue: 0, alpha: 0.66 )
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let SelectedCell = collectionView.cellForItem(at: indexPath)
+        {
+            SelectedCell.contentView.backgroundColor = UIColor.link
+        }
     }
  
     
