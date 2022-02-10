@@ -19,6 +19,7 @@ class Data
     var LastWeekDay: Int = 0
     var BlankArray = [" "]
     var ResultArray = [String]()
+    var FirstWeek = 6
     
     
     
@@ -111,6 +112,13 @@ class Data
         }
         ResultArray.append(contentsOf: DateArray2)
         
+        
+        
+        
         // collectionView.reloadData()
     }
+  // for i in 0...6{
+  //      FirstWeek.append(ResultArray[i])
+ //   }
+    
 }

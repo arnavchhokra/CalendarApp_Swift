@@ -11,10 +11,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //  var collectionView: UICollectionViewDelegate!
     var data = Data()
+    var Opened = Bool()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Opened = true
         collectionView.allowsMultipleSelection = false
         
         data.CurrentMonth = Calendar.current.component(.month, from: Date())
@@ -77,6 +79,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
+    @IBAction func dropdown(_ sender: Any) {
+        if(Opened == false)
+        {
+        Opened = true
+        }
+        else if(Opened == true)
+        {
+            Opened = false
+        }
+        collectionView.reloadData()
+    }
     
     
     
@@ -85,6 +98,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func Left_button(_ sender: Any) {
         data.LeftButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
+        Opened = true
         collectionView.reloadData()
     }
     
@@ -92,6 +106,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func swipeleft(_ sender: UISwipeGestureRecognizer) {
         data.RightButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
+        Opened = true
+
         collectionView.reloadData()
     }
     
@@ -99,6 +115,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func swiperight(_ sender: UISwipeGestureRecognizer) {
         data.LeftButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
+        Opened = true
+
         
         collectionView.reloadData()
     }
@@ -106,6 +124,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func Right_button(_ sender: Any) {
         data.RightButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
+        Opened = true
+
         collectionView.reloadData()
         
     }
@@ -121,7 +141,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
+        if(indexPath.item <= data.FirstWeek)
+        {
         Cell.setData(text: self.data.ResultArray[indexPath.row])
+        }
+        else{
+            Cell.isHidden = true
+            Cell.setData(text: self.data.ResultArray[indexPath.row])
+        }
+        if(Opened == true)
+        {
+            Cell.isHidden = false
+        }
         Cell.layer.cornerRadius = Cell.frame.height/2;
         Cell.backgroundColor = UIColor.link
         return Cell

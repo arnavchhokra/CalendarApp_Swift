@@ -53,8 +53,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Oct 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVz-tE-bKD">
-                                <rect key="frame" x="140" y="117" width="135" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVz-tE-bKD">
+                                <rect key="frame" x="147" y="117" width="120.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -110,6 +110,13 @@
                                     <constraint firstAttribute="width" constant="358" id="hSE-wS-RBR"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcM-SR-fa7">
+                                <rect key="frame" x="197" y="164.5" width="20" height="22.5"/>
+                                <state key="normal" image="arrow.down.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="dropdown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o4X-6h-bjH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,10 +131,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bGe-DQ-QZV" secondAttribute="trailing" id="IJg-31-09m"/>
                             <constraint firstItem="U7a-Lo-MpL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="35" id="JaM-Om-Po7"/>
                             <constraint firstItem="cSF-Md-UnT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35.5" id="LYD-fU-BCv"/>
+                            <constraint firstItem="pcM-SR-fa7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="197" id="XCB-wx-bmy"/>
                             <constraint firstItem="xVz-tE-bKD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="YY4-N1-Qc3"/>
                             <constraint firstItem="bGe-DQ-QZV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35.5" id="izr-D6-XJB"/>
+                            <constraint firstItem="k21-fs-tb2" firstAttribute="top" secondItem="pcM-SR-fa7" secondAttribute="bottom" constant="12" id="lvg-41-SlU"/>
                             <constraint firstItem="cSF-Md-UnT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="niX-kZ-Gco"/>
                             <constraint firstItem="U7a-Lo-MpL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o7d-w2-3IQ"/>
+                            <constraint firstItem="pcM-SR-fa7" firstAttribute="top" secondItem="xVz-tE-bKD" secondAttribute="bottom" constant="14" id="yZQ-u1-iLp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pcM-SR-fa7" secondAttribute="trailing" constant="197" id="yud-7t-SSc"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="mxt-ws-HbF" appends="YES" id="eW1-d5-X8c"/>
@@ -176,6 +187,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.down.circle" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.right.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
