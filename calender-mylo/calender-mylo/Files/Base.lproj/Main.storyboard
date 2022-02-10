@@ -136,8 +136,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="FHh-GV-S8w"/>
                     <connections>
+                        <outlet property="CollectionView" destination="U7a-Lo-MpL" id="JSj-BP-fYf"/>
                         <outlet property="MonthLbl" destination="xVz-tE-bKD" id="KgQ-IW-ECh"/>
-                        <outlet property="collectionView" destination="U7a-Lo-MpL" id="f3m-xh-PMI"/>
+                        <outlet property="collectionView" destination="U7a-Lo-MpL" id="zds-Bv-18K"/>
                         <outlet property="weekday_stack" destination="k21-fs-tb2" id="Fkw-lE-P9r"/>
                     </connections>
                 </viewController>

@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474934D027B5921B00242ABE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474934CF27B5921B00242ABE /* Data.swift */; };
 		4749F62727A2E50B0065C596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F62627A2E50B0065C596 /* AppDelegate.swift */; };
 		4749F62927A2E50B0065C596 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F62827A2E50B0065C596 /* SceneDelegate.swift */; };
 		4749F62B27A2E50B0065C596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F62A27A2E50B0065C596 /* ViewController.swift */; };
 		4749F62E27A2E50B0065C596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4749F62C27A2E50B0065C596 /* Main.storyboard */; };
 		4749F63027A2E50E0065C596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4749F62F27A2E50E0065C596 /* Assets.xcassets */; };
 		4749F63327A2E50E0065C596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4749F63127A2E50E0065C596 /* LaunchScreen.storyboard */; };
-		4749F63E27A2E50E0065C596 /* calender_myloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F63D27A2E50E0065C596 /* calender_myloTests.swift */; };
-		4749F64927A2E50E0065C596 /* calender_myloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749F64827A2E50E0065C596 /* calender_myloUITests.swift */; };
 		4749FD4E27A41F15002B3F36 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749FD4C27A41F15002B3F36 /* ItemCell.swift */; };
 		4749FD4F27A41F15002B3F36 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4749FD4D27A41F15002B3F36 /* ItemCell.xib */; };
 /* End PBXBuildFile section */
@@ -37,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		474934CF27B5921B00242ABE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		4749F62327A2E50B0065C596 /* calender-mylo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "calender-mylo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4749F62627A2E50B0065C596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4749F62827A2E50B0065C596 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,11 +46,7 @@
 		4749F63227A2E50E0065C596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4749F63427A2E50E0065C596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4749F63927A2E50E0065C596 /* calender-myloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "calender-myloTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4749F63D27A2E50E0065C596 /* calender_myloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calender_myloTests.swift; sourceTree = "<group>"; };
-		4749F63F27A2E50E0065C596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4749F64427A2E50E0065C596 /* calender-myloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "calender-myloUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4749F64827A2E50E0065C596 /* calender_myloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calender_myloUITests.swift; sourceTree = "<group>"; };
-		4749F64A27A2E50E0065C596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4749FD4C27A41F15002B3F36 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		4749FD4D27A41F15002B3F36 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,12 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		474934CC27B58CE500242ABE /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				4749F62A27A2E50B0065C596 /* ViewController.swift */,
+				4749FD4C27A41F15002B3F36 /* ItemCell.swift */,
+				4749FD4D27A41F15002B3F36 /* ItemCell.xib */,
+				4749F62C27A2E50B0065C596 /* Main.storyboard */,
+				474934CF27B5921B00242ABE /* Data.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		4749F61A27A2E50B0065C596 = {
 			isa = PBXGroup;
 			children = (
 				4749F62527A2E50B0065C596 /* calender-mylo */,
-				4749F63C27A2E50E0065C596 /* calender-myloTests */,
-				4749F64727A2E50E0065C596 /* calender-myloUITests */,
 				4749F62427A2E50B0065C596 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,35 +109,14 @@
 		4749F62527A2E50B0065C596 /* calender-mylo */ = {
 			isa = PBXGroup;
 			children = (
+				474934CC27B58CE500242ABE /* Files */,
 				4749F62627A2E50B0065C596 /* AppDelegate.swift */,
 				4749F62827A2E50B0065C596 /* SceneDelegate.swift */,
-				4749F62A27A2E50B0065C596 /* ViewController.swift */,
-				4749F62C27A2E50B0065C596 /* Main.storyboard */,
 				4749F62F27A2E50E0065C596 /* Assets.xcassets */,
 				4749F63127A2E50E0065C596 /* LaunchScreen.storyboard */,
 				4749F63427A2E50E0065C596 /* Info.plist */,
-				4749FD4C27A41F15002B3F36 /* ItemCell.swift */,
-				4749FD4D27A41F15002B3F36 /* ItemCell.xib */,
 			);
 			path = "calender-mylo";
-			sourceTree = "<group>";
-		};
-		4749F63C27A2E50E0065C596 /* calender-myloTests */ = {
-			isa = PBXGroup;
-			children = (
-				4749F63D27A2E50E0065C596 /* calender_myloTests.swift */,
-				4749F63F27A2E50E0065C596 /* Info.plist */,
-			);
-			path = "calender-myloTests";
-			sourceTree = "<group>";
-		};
-		4749F64727A2E50E0065C596 /* calender-myloUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4749F64827A2E50E0065C596 /* calender_myloUITests.swift */,
-				4749F64A27A2E50E0065C596 /* Info.plist */,
-			);
-			path = "calender-myloUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4749FD4E27A41F15002B3F36 /* ItemCell.swift in Sources */,
+				474934D027B5921B00242ABE /* Data.swift in Sources */,
 				4749F62B27A2E50B0065C596 /* ViewController.swift in Sources */,
 				4749F62727A2E50B0065C596 /* AppDelegate.swift in Sources */,
 				4749F62927A2E50B0065C596 /* SceneDelegate.swift in Sources */,
@@ -276,7 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4749F63E27A2E50E0065C596 /* calender_myloTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +269,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4749F64927A2E50E0065C596 /* calender_myloUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
