@@ -13,19 +13,29 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var data = Data()
     var Opened = Bool()
     var Clicked = Bool()
+    var IsMonthYear = Bool()
+    let CY = Calendar.current.component(.year, from: Date())
+    let CM = Calendar.current.component(.month, from: Date()) - 1
+    let CW = Calendar.current.component(Calendar.Component.weekOfMonth, from: Date())
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Opened = true
         Clicked = false
+        IsMonthYear = true
         collectionView.allowsMultipleSelection = false
+        
+        
+        data.FirstWeek = (CW)*6
+        
+        
         
         data.CurrentMonth = Calendar.current.component(.month, from: Date())
         data.CurrentMonth -= 1
         let CurrentYear = Calendar.current.component(.year, from: Date())
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(CurrentYear)"
-        
         
         
         let CurrentDate = Calendar.current.component(.day, from: Date())
@@ -70,8 +80,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         
-        
-        
+
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -105,22 +114,34 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var MonthLbl: UILabel!
     
     @IBAction func Left_button(_ sender: Any) {
+        IsMonthYear = false
         Clicked = true
         data.LeftButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
         Opened = true
         arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
+        if(data.CurrentMonth == CM && data.CurrentYear == CY)
+        {
+                IsMonthYear = true
+        }
+            
 
         collectionView.reloadData()
     }
     
     
     @IBAction func swipeleft(_ sender: UISwipeGestureRecognizer) {
+        IsMonthYear = false
         Clicked = true
         data.RightButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
         Opened = true
         arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
+        if(data.CurrentMonth == CM && data.CurrentYear == CY)
+        {
+                IsMonthYear = true
+        }
+
 
 
         collectionView.reloadData()
@@ -128,11 +149,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     @IBAction func swiperight(_ sender: UISwipeGestureRecognizer) {
+        IsMonthYear = false
         Clicked = true
         data.LeftButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
         Opened = true
         arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
+        if(data.CurrentMonth == CM && data.CurrentYear == CY)
+        {
+                IsMonthYear = true
+        }
+
 
 
         
@@ -140,11 +167,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func Right_button(_ sender: Any) {
+        IsMonthYear = false
         Clicked = true
         data.RightButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
         Opened = true
         arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
+        if(data.CurrentMonth == CM && data.CurrentYear == CY)
+        {
+                IsMonthYear = true
+        }
 
 
         collectionView.reloadData()
@@ -162,14 +194,30 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-        if(indexPath.item <= data.FirstWeek)
+        if(IsMonthYear == true)
+        {
+            if(indexPath.item >= data.FirstWeek - 5 && indexPath.item <= data.FirstWeek + 1)
         {
         Cell.setData(text: self.data.ResultArray[indexPath.row])
         }
+        
         else{
             Cell.isHidden = true
             Cell.setData(text: self.data.ResultArray[indexPath.row])
         }
+        }
+        else{
+            if(indexPath.item <= 6)
+            {
+            Cell.setData(text: self.data.ResultArray[indexPath.row])
+            }
+            
+            else{
+                Cell.isHidden = true
+                Cell.setData(text: self.data.ResultArray[indexPath.row])
+            }
+        }
+        
         if(Opened == true)
         {
             

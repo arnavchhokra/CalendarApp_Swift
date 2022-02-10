@@ -19,7 +19,8 @@ class Data
     var LastWeekDay: Int = 0
     var BlankArray = [" "]
     var ResultArray = [String]()
-    var FirstWeek = 6
+    var FirstWeek = Int()
+    
     
     
     
