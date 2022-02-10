@@ -12,11 +12,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //  var collectionView: UICollectionViewDelegate!
     var data = Data()
     var Opened = Bool()
+    var Clicked = Bool()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Opened = true
+        Clicked = false
         collectionView.allowsMultipleSelection = false
         
         data.CurrentMonth = Calendar.current.component(.month, from: Date())
@@ -78,17 +80,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
+    @IBOutlet weak var arrow: UIButton!
     
     @IBAction func dropdown(_ sender: Any) {
+        Opened = !(Opened)
         if(Opened == false)
         {
-        Opened = true
+            arrow.setImage(UIImage(systemName: "arrow.down.circle"), for: UIControl.State.normal)
+
+       // Opened = true
         }
         else if(Opened == true)
         {
-            Opened = false
+            arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
+
+          //  Opened = false
         }
         collectionView.reloadData()
+
     }
     
     
@@ -96,35 +105,47 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var MonthLbl: UILabel!
     
     @IBAction func Left_button(_ sender: Any) {
+        Clicked = true
         data.LeftButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
         Opened = true
+        arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
+
         collectionView.reloadData()
     }
     
     
     @IBAction func swipeleft(_ sender: UISwipeGestureRecognizer) {
+        Clicked = true
         data.RightButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
         Opened = true
+        arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
+
 
         collectionView.reloadData()
     }
     
     
     @IBAction func swiperight(_ sender: UISwipeGestureRecognizer) {
+        Clicked = true
         data.LeftButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
         Opened = true
+        arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
+
 
         
         collectionView.reloadData()
     }
     
     @IBAction func Right_button(_ sender: Any) {
+        Clicked = true
         data.RightButton()
         MonthLbl.text = "\(data.Month[data.CurrentMonth]) \(data.CurrentYear)"
         Opened = true
+        arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
+
 
         collectionView.reloadData()
         
@@ -151,7 +172,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         if(Opened == true)
         {
+            
             Cell.isHidden = false
+        }
+        if(Clicked == true)
+        {
+            Cell.contentView.backgroundColor = UIColor.link
         }
         Cell.layer.cornerRadius = Cell.frame.height/2;
         Cell.backgroundColor = UIColor.link
@@ -160,13 +186,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let SelectedCell = collectionView.cellForItem(at: indexPath)
-        {
-            
-            SelectedCell.contentView.backgroundColor = UIColor(red:1, green: 0, blue: 0, alpha: 0.66 )
-            
-        }
-        
+        let SelectedCell = collectionView.cellForItem(at: indexPath)
+        SelectedCell!.contentView.backgroundColor = UIColor(red:1, green: 0, blue: 0, alpha: 0.66 )
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -174,6 +195,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
             SelectedCell.contentView.backgroundColor = UIColor.link
         }
+        
+            
+        
         
     }
     

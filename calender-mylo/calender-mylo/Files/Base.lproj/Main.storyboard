@@ -112,7 +112,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcM-SR-fa7">
                                 <rect key="frame" x="197" y="164.5" width="20" height="22.5"/>
-                                <state key="normal" image="arrow.down.circle" catalog="system"/>
+                                <state key="normal" image="arrow.up.circle" catalog="system"/>
                                 <connections>
                                     <action selector="dropdown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o4X-6h-bjH"/>
                                 </connections>
@@ -149,6 +149,7 @@
                     <connections>
                         <outlet property="CollectionView" destination="U7a-Lo-MpL" id="JSj-BP-fYf"/>
                         <outlet property="MonthLbl" destination="xVz-tE-bKD" id="KgQ-IW-ECh"/>
+                        <outlet property="arrow" destination="pcM-SR-fa7" id="3N7-5z-gn2"/>
                         <outlet property="collectionView" destination="U7a-Lo-MpL" id="zds-Bv-18K"/>
                         <outlet property="weekday_stack" destination="k21-fs-tb2" id="Fkw-lE-P9r"/>
                     </connections>
@@ -187,7 +188,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.down.circle" catalog="system" width="128" height="121"/>
+        <image name="arrow.up.circle" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.right.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
