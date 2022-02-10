@@ -129,13 +129,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         ResultArray.append(contentsOf: DateArray2)
         
-        collectionView.reloadData()
-
-    }
+        collectionView.reloadData()}
     
     
-    func RightButton()
-    {
+    
+    
+    func RightButton() {
         ResultArray = []
     DateArray2 = DateArray
     CurrentMonth += 1
@@ -209,7 +208,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
          Cell.setData(text: self.ResultArray[indexPath.row])
-        Cell.layer.cornerRadius = Cell.frame.height/2;
+         Cell.layer.cornerRadius = Cell.frame.height/2;
+         Cell.backgroundColor = UIColor.link
          return Cell
          
     }
@@ -219,7 +219,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
 
             SelectedCell.contentView.backgroundColor = UIColor(red:1, green: 0, blue: 0, alpha: 0.66 )
+            
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -227,10 +229,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
             SelectedCell.contentView.backgroundColor = UIColor.link
         }
+        
     }
+  /*  func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1;
+    }
+    */
  
-    
-    
     
     @IBOutlet weak var weekday_stack: UIStackView!
     
