@@ -118,8 +118,8 @@ class Data
         
         // collectionView.reloadData()
     }
-  // for i in 0...6{
-  //      FirstWeek.append(ResultArray[i])
- //   }
+    // for i in 0...6{
+    //      FirstWeek.append(ResultArray[i])
+    //   }
     
 }
