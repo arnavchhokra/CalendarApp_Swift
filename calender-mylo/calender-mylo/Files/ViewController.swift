@@ -17,7 +17,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let CY = Calendar.current.component(.year, from: Date())
     let CM = Calendar.current.component(.month, from: Date()) - 1
     let CW = Calendar.current.component(Calendar.Component.weekOfMonth, from: Date())
-
+    
     
     
     override func viewDidLoad() {
@@ -80,7 +80,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         
-
+        
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -96,17 +96,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if(Opened == false)
         {
             arrow.setImage(UIImage(systemName: "arrow.down.circle"), for: UIControl.State.normal)
-
-       // Opened = true
+            
+            // Opened = true
         }
         else if(Opened == true)
         {
             arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
-
-          //  Opened = false
+            
+            //  Opened = false
         }
         collectionView.reloadData()
-
+        
     }
     
     
@@ -122,10 +122,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
         if(data.CurrentMonth == CM && data.CurrentYear == CY)
         {
-                IsMonthYear = true
+            IsMonthYear = true
         }
-            
-
+        
+        
         collectionView.reloadData()
     }
     
@@ -139,11 +139,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
         if(data.CurrentMonth == CM && data.CurrentYear == CY)
         {
-                IsMonthYear = true
+            IsMonthYear = true
         }
-
-
-
+        
+        
+        
         collectionView.reloadData()
     }
     
@@ -157,11 +157,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
         if(data.CurrentMonth == CM && data.CurrentYear == CY)
         {
-                IsMonthYear = true
+            IsMonthYear = true
         }
-
-
-
+        
+        
+        
         
         collectionView.reloadData()
     }
@@ -175,10 +175,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         arrow.setImage(UIImage(systemName: "arrow.up.circle"), for: UIControl.State.normal)
         if(data.CurrentMonth == CM && data.CurrentYear == CY)
         {
-                IsMonthYear = true
+            IsMonthYear = true
         }
-
-
+        
+        
         collectionView.reloadData()
         
     }
@@ -197,19 +197,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if(IsMonthYear == true)
         {
             if(indexPath.item >= data.FirstWeek - 5 && indexPath.item <= data.FirstWeek + 1)
-        {
-        Cell.setData(text: self.data.ResultArray[indexPath.row])
-        }
-        
-        else{
-            Cell.isHidden = true
-            Cell.setData(text: self.data.ResultArray[indexPath.row])
-        }
+            {
+                Cell.setData(text: self.data.ResultArray[indexPath.row])
+            }
+            
+            else{
+                Cell.isHidden = true
+                Cell.setData(text: self.data.ResultArray[indexPath.row])
+            }
         }
         else{
             if(indexPath.item <= 6)
             {
-            Cell.setData(text: self.data.ResultArray[indexPath.row])
+                Cell.setData(text: self.data.ResultArray[indexPath.row])
             }
             
             else{
@@ -244,7 +244,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             SelectedCell.contentView.backgroundColor = UIColor.link
         }
         
-            
+        
         
         
     }
