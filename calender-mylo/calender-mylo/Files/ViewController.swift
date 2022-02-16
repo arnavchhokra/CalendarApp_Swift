@@ -195,7 +195,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-        if(IsMonthYear == true)
+        if(data.CurrentMonth == CM)
         {
             if(indexPath.item >= data.FirstWeek + (data.BlankArray.count - 1 ) && indexPath.item <= data.FirstWeek +  6 + (data.BlankArray.count - 1))
             {
