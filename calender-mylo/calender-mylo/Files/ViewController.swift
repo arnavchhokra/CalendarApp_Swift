@@ -22,13 +22,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(data.BlankArray.count)
         Opened = true
         Clicked = false
         IsMonthYear = true
         collectionView.allowsMultipleSelection = false
         
         
-        data.FirstWeek = (CW)*6
+        data.FirstWeek = (CW * 7) - 7
         
         
         
@@ -196,7 +197,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
         if(IsMonthYear == true)
         {
-            if(indexPath.item >= data.FirstWeek - 5 && indexPath.item <= data.FirstWeek + 1)
+            if(indexPath.item >= data.FirstWeek + (data.BlankArray.count - 1 ) && indexPath.item <= data.FirstWeek +  6 + (data.BlankArray.count - 1))
             {
                 Cell.setData(text: self.data.ResultArray[indexPath.row])
             }
